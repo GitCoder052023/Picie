@@ -29,15 +29,6 @@ const format = winston.format.combine(
 
 const transports = [
     new winston.transports.Console(),
-    new winston.transports.File({
-        filename: 'logs/error.log',
-        level: 'error',
-        format: winston.format.uncolorize(), // File logs shouldn't be colorized
-    }),
-    new winston.transports.File({
-        filename: 'logs/all.log',
-        format: winston.format.uncolorize(),
-    }),
 ];
 
 export const logger = winston.createLogger({
