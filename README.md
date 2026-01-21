@@ -26,23 +26,34 @@
 - **🤖 AI-Powered**: Leverages the power of Google Gemini 2.0 (and related models) for high-accuracy text analysis and reasoning.
 - **🔒 Privacy First**: Your data stays yours. The extension analyzes text locally or via your personal API proxy, ensuring transparency.
 
-## 🏗 Architecture
-
-Picie consists of two main components:
-
-1.  **Chrome Extension**: A Manifest V3 extension that interacts with web pages to extract text and display insights. Built with Vanilla JS, HTML, and CSS for lightweight performance.
-2.  **Backend API**: A robust Node.js/Express application written in **TypeScript**. It acts as the bridge between the extension and the Google Gemini API, handling rate limits, prompt engineering, and response formatting.
-
 ## 🚀 Getting Started
 
-Load the extension into your browser.
+To get Picie running on your machine, follow these simple steps.
 
-1.  Open Chrome (or any Chromium browser like Edge/Brave).
-2.  Navigate to `chrome://extensions`.
-3.  Toggle **Developer Mode** in the top right corner.
-4.  Click **Load unpacked**.
-5.  Select the `extension` folder from this project directory.
-6.  Pin the extension icon for easy access!
+### 📥 1. Obtain the Source Code
+
+#### **Option A: For Normal Users (Easiest)**
+1.  Scroll to the top of this GitHub page.
+2.  Click the green **Code** button.
+3.  Select **Download ZIP** from the dropdown menu.
+4.  Once downloaded, extract the ZIP file to a folder of your choice.
+
+#### **Option B: For Developers (Git)**
+1.  Clone the repository using your terminal:
+    ```bash
+    git clone https://github.com/GitCoder0502023/Picie.git
+    ```
+
+---
+
+### 🧩 2. Load the Extension
+
+1.  Open Chrome (or any Chromium browser like Brave, Edge, or Vivaldi).
+2.  Go to the extensions page by typing `chrome://extensions` in the address bar.
+3.  Enable **Developer mode** using the toggle in the top-right corner.
+4.  Click the **Load unpacked** button.
+5.  Select the `extension` folder from the directory where you downloaded/cloned Picie.
+6.  **Success!** Picie is now ready. Pin it to your browser for quick access.
 
 ## 🤝 Contributing
 
