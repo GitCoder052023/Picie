@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = pageData.legalLinks.terms || pageData.legalLinks.privacy;
         if (!url) return;
 
-        showLoader(true);
+        setLoading(true, btnSummarize);
         try {
             const res = await fetch(`${API_BASE}/summarize-tnc`, {
                 method: 'POST',
@@ -68,14 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (err) {
             displayResult("Error connecting to backend: " + err.message);
         } finally {
-            showLoader(false);
+            setLoading(false, btnSummarize);
         }
     });
 
     btnCookies.addEventListener('click', async () => {
-        showLoader(true);
+        setLoading(true, btnCookies);
         try {
-            const policyUrl = pageData.legalLinks.privacy; // Heuristic: Cookie policy often linked near privacy
+            const policyUrl = pageData.legalLinks.privacy;
             const bannerText = pageData.cookieData.text;
 
             const res = await fetch(`${API_BASE}/analyze-cookie`, {
@@ -97,17 +97,31 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (err) {
             displayResult("Error connecting to backend: " + err.message);
         } finally {
-            showLoader(false);
+            setLoading(false, btnCookies);
         }
     });
+
+    function setLoading(isLoading, btn) {
+        if (isLoading) {
+            btn.disabled = true;
+            btn.classList.add('loading');
+            showLoader(true);
+        } else {
+            btn.disabled = false;
+            btn.classList.remove('loading');
+            showLoader(false);
+        }
+    }
 
     function showLoader(show) {
         if (show) {
             outputPanel.classList.remove('hidden');
             loader.classList.remove('hidden');
+            resultArea.classList.add('hidden');
             resultArea.innerHTML = "";
         } else {
             loader.classList.add('hidden');
+            resultArea.classList.remove('hidden');
         }
     }
 

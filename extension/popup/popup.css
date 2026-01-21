@@ -167,6 +167,35 @@ main {
   cursor: not-allowed;
 }
 
+.btn.loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid oklch(1 0 0 / 20%);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.btn-primary.loading::after {
+  border-top-color: var(--primary-foreground);
+}
+
+.btn-outline.loading::after {
+  border-top-color: var(--foreground);
+}
+
 .btn-primary {
   background-color: var(--primary);
   color: var(--primary-foreground);
@@ -206,7 +235,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Loader */
