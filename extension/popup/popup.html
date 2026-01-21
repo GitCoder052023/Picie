@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T&C Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="glass-header">
+      <h1>T&C <span class="accent">Summarizer</span></h1>
+    </header>
+
+    <main>
+      <div class="status-card glass-panel">
+        <div class="status-item">
+          <span class="label">Terms & Privacy:</span>
+          <span id="tnc-status" class="value bad">Not Found</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Cookie Banner:</span>
+          <span id="cookie-status" class="value bad">Not Detected</span>
+        </div>
+      </div>
+
+      <div class="action-grid">
+        <button id="summarize-btn" class="btn gradient-btn" disabled>
+          Summarize Policy
+        </button>
+        <button id="analyze-cookies-btn" class="btn outline-btn" disabled>
+          Cookie Decision
+        </button>
+      </div>
+
+      <div id="output-panel" class="output-panel glass-panel hidden">
+        <div class="loader-container hidden" id="loader">
+          <div class="spinner"></div>
+          <p>Processing with AI...</p>
+        </div>
+        <div id="result-text" class="result-text"></div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
