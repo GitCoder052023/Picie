@@ -41,7 +41,7 @@ To get Picie running on your machine, follow these simple steps.
 #### **Option B: For Developers (Git)**
 1.  Clone the repository using your terminal:
     ```bash
-    git clone https://github.com/GitCoder0502023/Picie.git
+    git clone https://github.com/GitCoder052023/Picie.git
     ```
 
 ---
@@ -60,7 +60,7 @@ To get Picie running on your machine, follow these simple steps.
 We welcome contributions from the community! Whether it's adding support for more legal document types, improving the UI, or optimizing the AI prompts, your help is appreciated.
 
 1.  **Fork** the repository.
-2.  **Clone** your fork: `git clone https://github.com/GitCoder0502023/Picie.git`
+2.  **Clone** your fork: `git clone https://github.com/GitCoder052023/Picie.git`
 3.  **Create a branch**: `git checkout -b feature/amazing-feature`
 4.  **Commit** your changes.
 5.  **Push** to the branch.
