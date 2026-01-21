@@ -24,7 +24,6 @@
 - **📜 One-Click Summaries**: Instantly condense lengthy Terms of Service and Privacy Policies into easy-to-read "TL;DR" points.
 - **🍪 Smart Cookie Management**: Automatically detects cookie consent pop-ups and suggests decisions based on your privacy preferences.
 - **🤖 AI-Powered**: Leverages the power of Google Gemini 2.0 (and related models) for high-accuracy text analysis and reasoning.
-- **🔒 Privacy First**: Your data stays yours. The extension analyzes text locally or via your personal API proxy, ensuring transparency.
 
 ## 🚀 Getting Started
 
