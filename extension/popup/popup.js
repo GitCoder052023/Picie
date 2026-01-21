@@ -33,22 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update T&C Status
         if (data.legalLinks.terms || data.legalLinks.privacy) {
             statusTnc.textContent = "Detected";
-            statusTnc.classList.remove('bad');
-            statusTnc.classList.add('good');
+            statusTnc.classList.remove('badge-error');
+            statusTnc.classList.add('badge-success');
             btnSummarize.disabled = false;
         }
 
         // Update Cookie Status
         if (data.cookieData.detected) {
             statusCookie.textContent = "Banner Detected";
-            statusCookie.classList.remove('bad');
-            statusCookie.classList.add('good');
+            statusCookie.classList.remove('badge-error');
+            statusCookie.classList.add('badge-success');
             btnCookies.disabled = false;
-        } else {
-            // Even if no banner, if there's a policy link, we can analyze the policy
-            // We might want to allow checking policy even if banner not found
-            // For now, only enable if banner OR policy found (logic enhancement)
-            // ...
         }
     }
 

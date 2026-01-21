@@ -11,37 +11,46 @@
 
 <body>
   <div class="app-container">
-    <header class="glass-header">
-      <h1><span class="accent">P</span>icie</h1>
+    <header class="navbar">
+      <div class="logo">
+        <div class="logo-icon">🥧</div>
+        <span class="logo-text">Picie</span>
+      </div>
     </header>
 
     <main>
-      <div class="status-card glass-panel">
-        <div class="status-item">
-          <span class="label">Terms & Privacy:</span>
-          <span id="tnc-status" class="value bad">Not Found</span>
-        </div>
-        <div class="status-item">
-          <span class="label">Cookie Banner:</span>
-          <span id="cookie-status" class="value bad">Not Detected</span>
+      <div class="card">
+        <div class="card-content">
+          <div class="status-item">
+            <span class="label">Terms & Privacy</span>
+            <span id="tnc-status" class="badge badge-error">Not Found</span>
+          </div>
+          <div class="status-item">
+            <span class="label">Cookie Banner</span>
+            <span id="cookie-status" class="badge badge-error">Not Detected</span>
+          </div>
         </div>
       </div>
 
       <div class="action-grid">
-        <button id="summarize-btn" class="btn gradient-btn" disabled>
+        <button id="summarize-btn" class="btn btn-primary" disabled>
           Summarize Policy
         </button>
-        <button id="analyze-cookies-btn" class="btn outline-btn" disabled>
+        <button id="analyze-cookies-btn" class="btn btn-outline" disabled>
           Cookie Decision
         </button>
       </div>
 
-      <div id="output-panel" class="output-panel glass-panel hidden">
-        <div class="loader-container hidden" id="loader">
-          <div class="spinner"></div>
-          <p>Processing with AI...</p>
+      <div id="output-panel" class="output-panel hidden">
+        <div class="card result-card">
+          <div class="card-content">
+            <div id="loader" class="loader-container hidden">
+              <div class="spinner"></div>
+              <p>Processing with Gemini AI...</p>
+            </div>
+            <div id="result-text" class="result-text"></div>
+          </div>
         </div>
-        <div id="result-text" class="result-text"></div>
       </div>
     </main>
   </div>
