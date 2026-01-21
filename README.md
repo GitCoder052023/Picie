@@ -35,48 +35,6 @@ Picie consists of two main components:
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
--   **Node.js** (v18 or higher)
--   **npm** or **yarn**
--   A **Google Gemini API Key** (Get one at [Google AI Studio](https://aistudio.google.com/))
-
-### 1. Backend Setup
-
-The backend handles the AI processing.
-
-```bash
-# Navigate to backend directory
-cd backend
-
-# Install dependencies
-npm install
-
-# Create environment file
-# (Create a .env file based on the example below)
-```
-
-**Create a `.env` file in the `backend` root:**
-
-```env
-GEMINI_API_KEY=your_actual_api_key_here
-PORT=3000
-```
-
-**Run the Server:**
-
-```bash
-# Development mode (with hot-reload)
-npm run dev
-
-# Production build
-npm run build
-npm start
-```
-*Server will start on `http://localhost:3000`*
-
-### 2. Extension Setup
-
 Load the extension into your browser.
 
 1.  Open Chrome (or any Chromium browser like Edge/Brave).
@@ -91,7 +49,7 @@ Load the extension into your browser.
 We welcome contributions from the community! Whether it's adding support for more legal document types, improving the UI, or optimizing the AI prompts, your help is appreciated.
 
 1.  **Fork** the repository.
-2.  **Clone** your fork: `git clone https://github.com/your-username/Picie.git`
+2.  **Clone** your fork: `git clone https://github.com/GitCoder0502023/Picie.git`
 3.  **Create a branch**: `git checkout -b feature/amazing-feature`
 4.  **Commit** your changes.
 5.  **Push** to the branch.

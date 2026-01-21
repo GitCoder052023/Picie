@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = 'https://picie.vercel.app/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const statusTnc = document.getElementById('tnc-status');
