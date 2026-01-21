@@ -1,8 +1,8 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 import { env } from "../config/env";
 import { logger } from "../utils/logger";
 
-const genAI = new GoogleGenerativeAI(env.GEMINI_API_KEY);
+const genAI = new GoogleGenAI({ apiKey: env.GEMINI_API_KEY });
 
 const MODEL_PRIORITY = [
     "gemini-3-flash-preview", 
@@ -24,14 +24,15 @@ export class GeminiService {
             try {
                 logger.debug(`[Gemini] Attempting with model: ${modelName}`);
 
-                const model = genAI.getGenerativeModel({
+                const response = await genAI.models.generateContent({
                     model: modelName,
-                    systemInstruction: systemInstruction,
+                    contents: prompt,
+                    config: {
+                        systemInstruction: systemInstruction,
+                    },
                 });
 
-                const result = await model.generateContent(prompt);
-                const response = await result.response;
-                const text = response.text();
+                const text = response.text;
 
                 if (!text) throw new Error("Empty response from AI");
 
